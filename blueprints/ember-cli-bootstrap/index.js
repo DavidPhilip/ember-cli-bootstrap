@@ -10,7 +10,7 @@ module.exports = {
 
     return this.addBowerPackageToProject('bootstrap', '~3.3')
       .then(function() {
-        return addonContext.addBowerPackageToProject('git@github.com:DavidPhilip/bootstrap-for-ember.git');
+        return addonContext.addBowerPackageToProject('git+ssh://git@github.com:DavidPhilip/bootstrap-for-ember.git#master');
       });
   }
 };
