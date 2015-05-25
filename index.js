@@ -5,14 +5,12 @@ module.exports = {
   name: 'ember-cli-bootstrap',
   included: function included(app) {
     this._super.included(app);
-    
-    app = app.app;
-    
+
     var emberCLIVersion = app.project.emberCLIVersion();
     if (emberCLIVersion < '0.0.41') {
       throw new Error('ember-cli-bootstrap requires ember-cli version 0.0.41 or greater.\n');
     }
-    
+
     var options         = app.options['ember-cli-bootstrap'] || {};
     var bootstrapPath   = app.bowerDirectory + '/bootstrap/dist';
     var emberBsPath     = app.bowerDirectory + '/ember-addons.bs_for_ember/dist';
